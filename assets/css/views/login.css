@@ -1,0 +1,39 @@
+.login {
+    background-color: var(--dark-blue);
+}
+
+.login .login-container .login-form {
+    background-color: var(--grey);
+}
+
+.login .login-container .login-form h1 {
+    color: var(--matte-black);
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.login .login-container .login-form label {
+    color: var(--dark-grey);
+}
+
+.login .login-container .login-form input {
+    border: 0.1rem solid rgb(157 157 157 / 36%);
+    background-color: var(--white);
+}
+
+.login .login-container .login-form :is(label.error, .error-message) {
+    color: #ff4f4f;
+}
+
+.login .login-container .login-form input:focus-visible {
+    border: 0.2rem solid var(--dark-blue);
+    outline: none;
+}
+
+.login .login-container .login-form button {
+    color: var(--white);
+    background-color: var(--dark-blue);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
