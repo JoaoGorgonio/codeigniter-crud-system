@@ -31,10 +31,11 @@
         <script src="<?= base_url('assets/libs/jquery/jquery.validate.min.js'); ?>"></script>
         <script src="<?= base_url('assets/libs/bootstrap/bootstrap.min.js'); ?>"></script>
         <script src="<?= base_url('assets/libs/fontawesome/all.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/libs/sweetalert/sweetalert.min.js'); ?>"></script>
         <script src="<?= base_url('assets/js/script.js'); ?>"></script>
         
         <script>
-            const url = '<?= site_url(''); ?>';
+            const base_url = '<?= site_url(''); ?>';
         </script>
     </body>
 </html>

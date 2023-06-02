@@ -32,3 +32,7 @@ p, h1, h2, h3, h4 {
 body {
     background-color: var(--grey);
 }
+
+.swal2-confirm {
+    background-color: var(--dark-blue) !important;
+}

@@ -24,7 +24,7 @@ $(function() {
             let data = $(form).serialize();
             $.ajax({
                 type: 'POST',
-                url: $url + 'login/authenticator',
+                url: base_url + 'login/auth',
                 data: data,
                 beforeSend: function()
                 {
@@ -32,11 +32,38 @@ $(function() {
                     $('.enviar-form').prop('disabled', true);
                     $("input").prop('disabled', true);
                 },
-                success: function() {
-                    window.location.replace('/');
+                success: function(response) {
+                    const res = JSON.parse(response);
+                    if (!res.success) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Tente novamente',
+                            text: 'Credenciais inválidas.',
+                            confirmButtonText: 'Confirmar'
+                        }).then((result) => {
+                            if (result.isConfirmed)
+                            {
+                                window.location.reload();
+                            }
+                        });
+                    }
+                    else 
+                    {
+                        window.location.replace('/dashboard')
+                    }
                 },
-                error: function(xhr) {
-                    
+                error: function(response) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Não foi possível realizar o login.',
+                        text: 'Ocorreu algum erro no servidor. Aguarde e tente novamente.',
+                        confirmButtonText: 'Confirmar'
+                    }).then((result) => {
+                        if (result.isConfirmed)
+                        {
+                            window.location.reload();
+                        }
+                    });
                 },
                 complete: function() {
                     $('.enviar-form').text("Entrar");
