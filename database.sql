@@ -31,7 +31,13 @@ CREATE TABLE tb_endereco (
 INSERT INTO tb_endereco (cd_cep, nm_estado, nm_cidade, nm_bairro, nm_rua, cd_rua, ds_complemento, cd_usuario)
 VALUES ('11075-651', 'São Paulo', 'Santos', 'Campo Grande', 'Rua João Carvalhal Filho', '1217', 'Apartamento 309', 1);
 
-
-CREATE TABLE tb_log (
-  cd_log INT(11) AUTO_INCREMENT NOT NULL
+CREATE TABLE tb_falha_login (
+  cd_falha_login INT(11) AUTO_INCREMENT NOT NULL,
+  cd_ip VARCHAR(255) NOT NULL,
+  dt_tentativa DATETIME NOT NULL,
+  PRIMARY KEY (cd_falha_login)
 );
+
+-- CREATE TABLE tb_log (
+--   cd_log INT(11) AUTO_INCREMENT NOT NULL
+-- );

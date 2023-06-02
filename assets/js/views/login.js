@@ -38,7 +38,7 @@ $(function() {
                         Swal.fire({
                             icon: 'error',
                             title: 'Tente novamente',
-                            text: 'Credenciais inválidas.',
+                            text: res.message,
                             confirmButtonText: 'Confirmar'
                         }).then((result) => {
                             if (result.isConfirmed)
@@ -52,7 +52,7 @@ $(function() {
                         window.location.replace('/dashboard')
                     }
                 },
-                error: function(response) {
+                error: function() {
                     Swal.fire({
                         icon: 'error',
                         title: 'Não foi possível realizar o login.',
