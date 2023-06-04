@@ -11,7 +11,7 @@ CREATE TABLE tb_usuario (
 );
 
 INSERT INTO tb_usuario (nm_usuario, cd_email, cd_senha, ic_admin, ic_ativo)
-VALUES ('João Gorgonio', 'teste@gmail.com', '$2y$10$v1A03mh0fL6q9X8YIx4wNOi1UHTdvqfDo0LGyAKtFrlE8XDLNfpuG', 1, 1);
+VALUES ('Many Minds', 'teste@manyminds.com.br', '$2y$10$v1A03mh0fL6q9X8YIx4wNOi1UHTdvqfDo0LGyAKtFrlE8XDLNfpuG', 1, 1);
 
 
 CREATE TABLE tb_endereco (
