@@ -11,7 +11,7 @@ php -S localhost:8000 (utilize a porta de sua preferência, que esteja disponív
 
 Para criar e executar o banco de dados, utilize os scripts disponíveis no arquivo:
 
-database.sql
+- `database.sql`
 
 Por fim, altere as configurações dos arquivos de config, baseado nas configurações executadas no seu ambiente, nos seguintes arquivos:
 
