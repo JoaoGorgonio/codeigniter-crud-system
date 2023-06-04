@@ -1,13 +1,9 @@
-************
-Baixe o projeto
-************
+#Baixe o projeto
 
 Primeiramente, escolha um diretório de preferência e utilize o comando: 
 - git clone url_do_projeto
 
-************
-Executando o projeto
-************
+#Executando o projeto
 
 Após isso, abra o diretório do projeto, e através do seu terminal ou prompt de comando, execute
 o seguinte comando para iniciar o projeto e seu servidor PHP:
@@ -26,9 +22,7 @@ Altere as configurações $config['base_url'], baseado na URL que está sendo ex
 Altere as configurações de hostname, username, password e database, com base nas credenciais
 do seu banco de dados.
 
-************
-Credenciais
-************
+#Credenciais
 Login de Acesso 
 Email: teste@gmail.com
 Senha: senha123
