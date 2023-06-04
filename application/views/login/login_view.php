@@ -11,11 +11,11 @@
                     <h1 class="text-center">Acessar Conta</h1>
                     <div class="mt-5 col-12">
                         <label for="login-email">E-mail:</label>
-                        <input type="email" name="email" class="col-12 rounded-1 p-2" id="login-email" value="teste@gmail.com">
+                        <input type="email" name="email" class="col-12 rounded-1 p-2" id="login-email">
                     </div>
                     <div class="mt-5 col-12">
                         <label for="login-password">Senha:</label>
-                        <input type="password" name="password" class="col-12 rounded-1 p-2" id="login-password" value="senha123">
+                        <input type="password" name="password" class="col-12 rounded-1 p-2" id="login-password">
                     </div>
                     <button class="mt-5 py-2 rounded-3 enviar-form" type="submit">Entrar</button>
                 </form>
