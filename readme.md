@@ -23,6 +23,6 @@ Por fim, altere as configurações dos arquivos de config, baseado nas configura
 
 Login de Acesso 
 
-Email: teste@gmail.com
+Email: teste@manyminds.com.br
 
 Senha: senha123
