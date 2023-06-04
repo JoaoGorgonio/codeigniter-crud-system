@@ -1,0 +1,27 @@
+.log-view .log-table table {
+    background-color: var(--white);
+    border-radius: 0.6rem;
+}
+
+.log-view .log-table table th {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-weight: 600;
+    padding: 1rem 0rem;
+}
+
+.log-view .log-table table td {
+    padding: 1.6rem 0rem;
+}
+
+@media (max-width: 991px) {
+    .log-view .log-table {
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 425px) {
+    .log-view .log-table table {
+        width: 42.5rem;
+    }
+}

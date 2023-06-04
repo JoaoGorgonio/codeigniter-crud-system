@@ -22,7 +22,13 @@ a:hover {
     --grey: #F1F5FF;
     --dark-grey: #858585;
     --dark-blue: #0d3d8a;
+    --hover-blue: #446dad;
     --matte-black: #1b1b1b;
+    --light-green: #bbf7d0;
+    --dark-green: #14532d;
+    --light-red: #fecaca;
+    --dark-red: #7f1d1d;
+    --error-red: #ff0707;
 }
 
 p, h1, h2, h3, h4 {
@@ -31,6 +37,73 @@ p, h1, h2, h3, h4 {
 
 body {
     background-color: var(--grey);
+}
+
+.btn {
+    font-size: 1.6rem;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--hover-blue);
+    color: var(--white);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--matte-black);
+}
+
+h1 span{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.input {
+    background-color: var(--white);
+    padding: 0.6rem 1rem;
+    color: var(--matte-black);
+    font-weight: 400;
+    border: 0.1rem solid rgb(157 157 157 / 36%);
+    border-radius: 0.4rem; 
+}
+
+.input:focus-visible {
+    border: 0.2rem solid var(--dark-blue);
+    outline: none;
+}
+
+.button-collapse {
+    background-color: var(--grey);
+    border: 0.1rem solid rgba(0,0,0,0.2);
+    padding: 1rem 2rem;
+    color: var(--matte-black);
+    font-weight: 600;
+    text-align: start;
+}
+
+.collapse {
+    background-color: var(--grey);
+    border: 0.1rem solid rgba(0,0,0,0.2);
+    /* border-top: none; */
+    padding: 2rem;
+}
+
+.label {
+    color: var(--dark-grey);
+}
+
+label.error {
+    color: var(--error-red);
 }
 
 .swal2-confirm {

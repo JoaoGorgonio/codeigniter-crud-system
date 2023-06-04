@@ -17,7 +17,7 @@ VALUES ('João Gorgonio', 'teste@gmail.com', '$2y$10$v1A03mh0fL6q9X8YIx4wNOi1UHT
 CREATE TABLE tb_endereco (
   cd_endereco INT(11) AUTO_INCREMENT NOT NULL, 
   cd_cep VARCHAR(9) NOT NULL,
-  nm_estado VARCHAR(255) NOT NULL,
+  sg_uf CHAR(2) NOT NULL,
   nm_cidade VARCHAR(255) NOT NULL,
   nm_bairro VARCHAR(255) NOT NULL,
   nm_rua VARCHAR(255) NOT NULL,
@@ -28,8 +28,8 @@ CREATE TABLE tb_endereco (
   PRIMARY KEY (cd_endereco)
 );
 
-INSERT INTO tb_endereco (cd_cep, nm_estado, nm_cidade, nm_bairro, nm_rua, cd_rua, ds_complemento, cd_usuario)
-VALUES ('11075-651', 'São Paulo', 'Santos', 'Campo Grande', 'Rua João Carvalhal Filho', '1217', 'Apartamento 309', 1);
+INSERT INTO tb_endereco (cd_cep, sg_uf, nm_cidade, nm_bairro, nm_rua, cd_rua, ds_complemento, cd_usuario) 
+VALUES ('11075-651', 'SP', 'Santos', 'Campo Grande', 'Rua João Carvalhal Filho', '1217', 'Apartamento 309', 1);
 
 CREATE TABLE tb_falha_login (
   cd_falha_login INT(11) AUTO_INCREMENT NOT NULL,
@@ -38,6 +38,46 @@ CREATE TABLE tb_falha_login (
   PRIMARY KEY (cd_falha_login)
 );
 
--- CREATE TABLE tb_log (
---   cd_log INT(11) AUTO_INCREMENT NOT NULL
--- );
+CREATE TABLE tb_log (
+  cd_log INT(11) AUTO_INCREMENT NOT NULL,
+  dt_log DATE NOT NULL,
+  hr_log TIME NOT NULL, 
+  nm_tipo_log VARCHAR(255) NOT NULL,
+  cd_usuario INT(11) NOT NULL,
+  FOREIGN KEY (cd_usuario) REFERENCES tb_usuario(cd_usuario),
+  PRIMARY KEY (cd_log)
+);
+
+CREATE TABLE tb_estado (
+  sg_estado CHAR(2) NOT NULL,
+  nm_estado VARCHAR(255) NOT NULL
+);
+
+INSERT INTO tb_estado (sg_estado, nm_estado) VALUES
+('AC', 'Acre'),
+('AL', 'Alagoas'),
+('AP', 'Amapá'),
+('AM', 'Amazonas'),
+('BA', 'Bahia'),
+('CE', 'Ceará'),
+('DF', 'Distrito Federal'),
+('ES', 'Espírito Santo'),
+('GO', 'Goiás'),
+('MA', 'Maranhão'),
+('MT', 'Mato Grosso'),
+('MS', 'Mato Grosso do Sul'),
+('MG', 'Minas Gerais'),
+('PA', 'Pará'),
+('PB', 'Paraíba'),
+('PR', 'Paraná'),
+('PE', 'Pernambuco'),
+('PI', 'Piauí'),
+('RJ', 'Rio de Janeiro'),
+('RN', 'Rio Grande do Norte'),
+('RS', 'Rio Grande do Sul'),
+('RO', 'Rondônia'),
+('RR', 'Roraima'),
+('SC', 'Santa Catarina'),
+('SP', 'São Paulo'),
+('SE', 'Sergipe'),
+('TO', 'Tocantins');

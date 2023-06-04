@@ -1,20 +1,22 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends MY_Controller
+class Log extends MY_Controller
 {
     public function __construct() 
     {
         parent::__construct();
         $this->middleware();
         $this->load->model('MUser');
+        $this->load->model('MLog');
     }
         
     public function index()
     {
-        $data['title'] = 'Home - ManyMinds';
+        $data['title'] = 'Logs - ManyMinds';
         $data['my_user'] = $this->MUser->getUser($this->session->userdata('user_id'));
-        $data['content'] = $this->load->view('system/home', $data, true);
+        $data['logs'] = $this->MLog->getAllLogs();
+        $data['content'] = $this->load->view('system/log/view', $data, true);
         $this->load->view('template', $data);
 	}
 }

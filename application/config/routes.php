@@ -53,8 +53,20 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// Rotas de Autenticação e Login
 $route['login'] = 'login/index';
 $route['login/auth'] = 'login/auth';
 $route['logout'] = 'login/logout';
 
+// Rota Inicial do Dashboard
 $route['dashboard'] = 'home/index';
+
+// Rotas de Usuário
+$route['dashboard/user'] = 'user/index';
+$route['dashboard/user/create'] = 'user/store';
+$route['dashboard/user/registering'] = 'user/registering';
+$route['dashboard/user/edit/(:num)'] = 'user/update/$1';
+$route['dashboard/user/editing'] = 'user/editing';
+
+// Rotas de Usuário
+$route['dashboard/logs'] = 'log/index';

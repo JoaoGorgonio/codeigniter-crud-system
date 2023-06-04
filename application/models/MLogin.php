@@ -3,7 +3,7 @@
     {
         public function authenticateUser($email, $password)
         {
-            $query = $this->db->get_where('tb_usuario', array('cd_email' => $email));
+            $query = $this->db->get_where('tb_usuario', array('cd_email' => $email, 'ic_ativo' => 1));
             $user = $query->row();
     
             if ($user && password_verify($password, $user->cd_senha)) 

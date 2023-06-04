@@ -1,0 +1,71 @@
+.user-view .search-btn {
+    border-radius: 0rem 0.4rem 0.4rem 0rem;
+}
+
+.user-view .user-table table {
+    background-color: var(--white);
+    border-radius: 0.6rem;
+}
+
+.user-view .user-table table th {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-weight: 600;
+    padding: 1rem 0rem;
+}
+
+.user-view .user-table table td {
+    padding: 1.6rem 0rem;
+}
+
+.user-view .user-table table .active-user {
+    background-color: var(--light-green);
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    color: var(--dark-green);
+}
+
+.user-view .user-table table .inactive-user {
+    background-color: var(--light-red);
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    color: var(--dark-red);
+}
+
+.user-view .user-table table .edit-user svg {
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.user-create .form-user {
+    background-color: var(--white);
+    border-radius: 0.4rem;
+    -webkit-box-shadow: 9px 6px 23px -16px rgba(0,0,0,0.1);
+    -moz-box-shadow: 9px 6px 23px -16px rgba(0,0,0,0.1);
+    box-shadow: 9px 6px 23px -16px rgba(0,0,0,0.1);
+}
+
+.user-create .form-user .steps {
+    color: var(--white);
+    background-color: var(--hover-blue);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.user-create .form-user .steps.active-step {
+    color: var(--white);
+    background-color: var(--dark-blue);
+    padding: 1rem;
+}
+
+@media (max-width: 991px) {
+    .user-view .user-table {
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 425px) {
+    .user-view .user-table table {
+        width: 42.5rem;
+    }
+}
