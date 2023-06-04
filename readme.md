@@ -1,13 +1,13 @@
 # Baixe o projeto
 
 Primeiramente, escolha um diretório de preferência e utilize o comando:
-git clone url_do_projeto
+`git clone url_do_projeto`
 
 # Executando o projeto
 
 Após isso, abra o diretório do projeto, e através do seu terminal ou prompt de comando, execute o seguinte comando para iniciar o projeto e seu servidor PHP:
 
-php -S localhost:8000 (utilize a porta de sua preferência, que esteja disponível).
+`php -S localhost:8000` (utilize a porta de sua preferência, que esteja disponível).
 
 Para criar e executar o banco de dados, utilize os scripts disponíveis no arquivo:
 
